@@ -15,6 +15,7 @@ class Person(val firstName: String, val lastName: String, var age: Int ) {
     constructor(): this("","",-1)
 }
 
+//data - переопределяет стандартные методы класса, те, что наследовались от класса Object (equals(), hashCode(), toString() и т.д.)
 data class Rectangle(var height: Double, var lenght: Double) {
     var perimeter = (height + lenght) * 2
     var test = 1

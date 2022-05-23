@@ -8,7 +8,7 @@ fun main() {
     //Elvis оператор - ?:
     val l = b?.length ?: -1 //если b - не null, то в l положится длина, если null, то -1
 
-    // !! - выбрасвает NPE, если в переменной null
+    // !! - выбрасывает NPE, если в переменной null
     b = if ((0..10).random() > 5) "asd" else null
     val t = b!!.length
     println(t)
