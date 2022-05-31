@@ -31,6 +31,7 @@ open class LinkRepositoryTest : AbstractRepositoryTest() {
 
     @Test
     fun findOneNotExisting() {
+        println("hello1")
         val got: Optional<Link> = repository.findOne(LINK_NOT_FOUND)
         assertThat(got.isPresent, equalTo(false))
     }
