@@ -1,0 +1,28 @@
+
+### тест для пополнения номера счета
+POST http://localhost:8080/add
+Content-Type: application/json
+
+{
+"to":2,
+"amount":100
+}
+
+
+### тест для перевода со счета from на счет to и какая сумма amount
+POST http://localhost:8080/transfer
+Content-Type: application/json
+
+{
+"from":2,
+"to":1,
+"amount":10
+}
+
+### баланс счета 1
+GET http://localhost:8080/1
+
+
+#### баланс счета 2
+GET http://localhost:8080/2
+
