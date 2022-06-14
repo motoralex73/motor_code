@@ -3,9 +3,14 @@ package com.example.motor_bank;
 import com.example.motor_bank.model.TranferBalance;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 @Slf4j //логгирование через Ломбок
 @RestController("/balance")
@@ -13,6 +18,21 @@ import java.math.BigDecimal;
 public class BalanceController {
 
     private final BankService bankService;
+
+    @Bean
+    public String getOne() {
+        return "You enter One number";
+    }
+
+    @GetMapping("two")
+    public String getTwo() {
+        return "You enter Two number";
+    }
+
+    @GetMapping
+    public String getThree() {
+        return "You enter Three number";
+    }
 
     @GetMapping("/{accountId}")
     public BigDecimal getBalance(@PathVariable Long accountId) { //метод будет получать на вход объект, который будет взят из пути
@@ -24,7 +44,6 @@ public class BalanceController {
         System.out.println("add");
         return bankService.addMoney(tranferBalance.getTo(), tranferBalance.getAmount());
     }
-
 
     @PostMapping("/transfer")
     public void tranfer(@RequestBody TranferBalance tranferBalance) {
