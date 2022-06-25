@@ -1,6 +1,6 @@
 package com.example.motor_bank;
 
-import com.example.motor_bank.model.TranferBalance;
+import com.example.motor_bank.model.TransferBalance;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +33,7 @@ public class BankService {
         }
     }
 
-    public void makeTransfer(TranferBalance tranferBalance) {
+    public void makeTransfer(TransferBalance tranferBalance) {
         BigDecimal fromBalance = repository.getBalanceForId(tranferBalance.getFrom());
         BigDecimal toBalance = repository.getBalanceForId(tranferBalance.getTo());
         if (fromBalance == null || toBalance == null) throw new IllegalArgumentException("no id");
