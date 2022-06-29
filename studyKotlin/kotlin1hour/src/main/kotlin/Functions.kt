@@ -30,5 +30,6 @@ fun main() {
     testDefaultArguments(x = 5,y = 7)
     println(foo("hello"))
     printEvent(1,2,3,4,5,6,7,8,9)
-    printEvent(*intArrayOf(1,2,3,4,5,6,7,8,9,10)) //передаем массив чисел, поэлементно подставляя в функцию
+    var p : IntArray = intArrayOf(1,2,3,4,5,6,7,8,9,10)
+    printEvent(*p) //передаем массив чисел, поэлементно подставляя в функцию
 }
