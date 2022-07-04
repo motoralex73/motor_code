@@ -1,4 +1,4 @@
-
+package study_kotlin_1_hour
 sealed class Db{
     data class MySQL(val id:Int, val conn:String) : Db()
     data class MongoDB(val id:Int, val conn:String) : Db()
