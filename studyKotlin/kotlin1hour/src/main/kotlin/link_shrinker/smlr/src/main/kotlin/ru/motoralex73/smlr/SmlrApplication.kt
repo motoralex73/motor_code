@@ -1,4 +1,4 @@
-package com.linkshr.smlr
+package ru.motoralex73.smlr
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

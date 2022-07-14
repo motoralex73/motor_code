@@ -1,4 +1,4 @@
-package com.linkshr.smlr
+package ru.motoralex73.smlr
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
