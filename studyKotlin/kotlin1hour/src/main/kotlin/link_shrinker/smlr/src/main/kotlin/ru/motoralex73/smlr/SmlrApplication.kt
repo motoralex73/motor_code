@@ -1,11 +1,13 @@
 package ru.motoralex73.smlr
 
+import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+//import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SmlrApplication
+open class SmlrApplication
 
 fun main(args: Array<String>) {
-	runApplication<SmlrApplication>(*args)
+	SpringApplication.run(SmlrApplication::class, *args)
+
 }
