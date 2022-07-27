@@ -13,9 +13,6 @@ fun main() {
         println("массив нечетных чисел = $select_neche")
         val s2 = select_neche.sum() //находим сумму четных чисел
         println("сумма нечетных чисел = $s2")
-
-
-
     }
 
     lamda()
