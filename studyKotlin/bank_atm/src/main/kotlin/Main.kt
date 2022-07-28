@@ -8,15 +8,41 @@ fun printAccount(str:String) {
             "4 - Выход")
 }
 
-fun mainAccount() {
-    printAccount("основного счета по всем картам")
+fun mainAccount(bCard:Double, str:String):Double {
+    printAccount("основного счета по всем ${str}ам")
+    var balance = bCard
+    var deleteMoney = 0.0
+    var addMoney = 0.0
+
+    when (readLine()!!.toInt()) {
+        1 -> {
+            println("Баланс ${str}: $balance")
+        }
+        2 -> {
+            println(
+                "Текущий баланс ${str}: $balance рублей\n" +
+                        "Укажите сколько средств снять:"
+            )
+            deleteMoney = readLine()!!.toDouble()
+            balance -= deleteMoney
+            println("Баланс ${str}: $balance")
+        }
+        3 -> {
+            println(
+                "Текущий баланс ${str}: $balance рублей\n" +
+                        "Укажите сколько средств добавить:"
+            )
+            addMoney = readLine()!!.toDouble()
+            balance += addMoney
+            println("Баланс ${str}: $balance")
+        }
+        4 -> exitProcess(4)
+        else -> exitProcess(4)
+    }
+    return balance
 }
 
-fun safeAccount() {
-    printAccount("сберегательного счета книжки")
-}
-
-fun main() {
+fun bankService() {
     val atm = Atm()
     var correctCard = -1
     var count = 3
@@ -40,85 +66,13 @@ fun main() {
         }
     }
 
-    var cardAccount = MainAccount(balanceCard)
-    var bookAccount = SafeAccount(balanceBook)
-
-    var deleteMoneyCard = 0.0
-    var deleteMoneyBook = 0.0
-
-    var addMoneyCard = 0.0
-    var addMoneyBook = 0.0
-
     while (true) {
         when (atm.accountRecord()) {
-            1 -> {
-                mainAccount() //карта
-                when (readLine()!!.toInt()) {
-                    1 -> {
-                        //cardAccount.printBalance()
-                        println("Баланс карт: $balanceCard")
-                    }
-                    2 -> {
-                        println(
-                            "Текущий баланс карты: $balanceCard рублей\n" +
-                                    "Укажите сколько средств снять:"
-                        )
-                        deleteMoneyCard = readLine()!!.toDouble()
-                        balanceCard -= deleteMoneyCard
-                        println("Баланс карты: $balanceCard")
-                    }
-
-                    3 -> {
-                        println(
-                            "Текущий баланс карты: $balanceCard рублей\n" +
-                                    "Укажите сколько средств добавить:"
-                        )
-                        addMoneyCard = readLine()!!.toDouble()
-                        balanceCard += addMoneyCard
-                        println("Баланс карты: $balanceCard")
-                    }
-
-                    4 -> exitProcess(4)
-                    else -> exitProcess(4)
-                }
-            }
-
-            2 -> {
-                safeAccount() //сбер книжка
-                when (readLine()!!.toInt()) {
-                    1 -> {
-                        println("Баланс сбер книжки: $balanceBook")
-                    //bookAccount.printBalance()
-                    }
-                    2 -> {
-                        println(
-                            "Текущий баланс книжки: $balanceBook рублей\n" +
-                                    "Укажите сколько средств снять:"
-                        )
-                        deleteMoneyBook = readLine()!!.toDouble()
-                        balanceBook -= deleteMoneyBook
-                        println("Баланс карты: $balanceBook")
-                    }
-
-                    3 -> {
-                        println(
-                            "Текущий баланс книжки: $balanceBook рублей\n" +
-                                    "Укажите сколько средств добавить:"
-                        )
-                        addMoneyBook = readLine()!!.toDouble()
-                        balanceBook += addMoneyBook
-                        println("Баланс сбер книжки: $balanceBook")
-                    }
-
-                    4 -> exitProcess(4)
-                    else -> exitProcess(4)
-                }
-            }
-
+            1 -> balanceCard = mainAccount(balanceCard,"карт") //карта
+            2 -> balanceBook = mainAccount(balanceBook,"сбер.книжки") //сбер книжка
             3 -> exitProcess(3)
             else -> exitProcess(3)
         }
-
         println("q - Выход. Enter - продолжим.")
         when (readLine()) {
             "q" -> exitProcess(5)
@@ -126,4 +80,8 @@ fun main() {
         }
     }
     atm.stop()
+}
+
+fun main() {
+    bankService()
 }

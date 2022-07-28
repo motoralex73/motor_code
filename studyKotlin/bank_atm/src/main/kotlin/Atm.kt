@@ -38,6 +38,6 @@ class Atm {
             3 -> 3
             else -> 3
         }
-        return 0
+        return 3
     }
 }
