@@ -1,1 +1,1 @@
-class Card(val numberCard:Int, val pinCode:Int)
+data class Card(val numberCard:Int, val pinCode:Int)
