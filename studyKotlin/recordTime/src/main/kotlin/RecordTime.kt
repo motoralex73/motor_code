@@ -5,6 +5,7 @@ import java.io.IOException
 import java.nio.charset.Charset
 import java.sql.Time
 import java.util.Date
+import kotlin.time.hours
 
 class RecordTime(private val date:String, private val timeStart:Time, private val timeEnd:Time,
                  private val timeReserve:Time, fileName: String) {
@@ -56,7 +57,7 @@ class RecordTime(private val date:String, private val timeStart:Time, private va
 
     fun saveCurrentTimeToFile() {
         val fileRead = f.readText()
-        val count = 0//countMatches(fileRead,date)
+        val count = countMatches(fileRead,date)
         val listFile = getList(fileRead)
         val lastString = listFile[listFile.count()-2]
         listFile.forEach {
@@ -64,15 +65,16 @@ class RecordTime(private val date:String, private val timeStart:Time, private va
         }
         println("LAST STRING=$lastString")
 
-        val h = getHour(lastString)
+        var h = getHour(lastString)
         println("H=$h")
 
-        val m = getMin(lastString)
+        var m = getMin(lastString)
         println("M=$m")
 
-        val resMin = 10
         if (count == 0) {
-            val timeString = "$date > $timeStart - $timeEnd = $timeReserve |> запас времени час=${11} мин=${12}\n"
+            h += timeReserve.hours
+            m += timeReserve.minutes
+            var timeString = "$date > $timeStart - $timeEnd = $timeReserve |> запас времени час=0$h мин=${m}\n"
             println("Добавлена новая запись: $timeString")
             f.appendText(timeString, charset = Charset.defaultCharset())
         }
