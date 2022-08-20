@@ -15,16 +15,15 @@ public class BalanceController {
     private final BankService bankService;
 
     @GetMapping("/{accountId}")
-    public BigDecimal getBalance(@PathVariable Long accountId) { //метод будет получать на вход объект, который будет взят из пути
+    public Long getBalance(@PathVariable Long accountId) { //метод будет получать на вход объект, который будет взят из пути
         return bankService.getBalance(accountId);
     }
 
     @PostMapping("/add")
-    public BigDecimal addMoney(@RequestBody TranferBalance tranferBalance) {
+    public Long addMoney(@RequestBody TranferBalance tranferBalance) {
         System.out.println("add");
-        return bankService.addMoney(tranferBalance.getTo(), tranferBalance.getAmount());
+        return bankService.addMoney(tranferBalance.getToSender(), tranferBalance.getAmountSender());
     }
-
 
     @PostMapping("/transfer")
     public void tranfer(@RequestBody TranferBalance tranferBalance) {

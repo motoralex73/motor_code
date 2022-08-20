@@ -1,34 +1,28 @@
 package com.example.motor_bank.model;
 
+import lombok.Data;
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 
+@Data
+@Entity
+@Table(name = "transfer")
 public class TranferBalance {
-    public Long getFrom() {
-        return from;
+    @Id
+    private Long id;
+    private Long fromSender;
+    private Long toSender;
+    private Long amountSender;
+
+    public TranferBalance(Long id, Long fromSender, Long toSender, Long amountSender) {
+        this.id = id;
+        this.fromSender = fromSender;
+        this.toSender = toSender;
+        this.amountSender = amountSender;
     }
-
-    public void setFrom(Long from) {
-        this.from = from;
-    }
-
-    public Long getTo() {
-        return to;
-    }
-
-    public void setTo(Long to) {
-        this.to = to;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    private Long from;
-    private Long to;
-    private BigDecimal amount;
-
+    public TranferBalance() {}
 }

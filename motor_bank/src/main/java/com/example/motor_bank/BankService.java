@@ -12,37 +12,37 @@ public class BankService {
 
     private final BalanceRepository repository;
 
-    public BigDecimal getBalance(Long accountId) {
-        BigDecimal balance = repository.getBalanceForId(accountId);
+    public Long getBalance(Long accountId) {
+        Long balance = repository.getBalanceForId(accountId);
         if (balance == null) {
             throw new IllegalArgumentException();
         }
         return balance;
     }
 
-    public BigDecimal addMoney(Long to, BigDecimal amount) {
-        BigDecimal currentBalance = repository.getBalanceForId(to);
+    public Long addMoney(Long to, Long amount) {
+        Long currentBalance = repository.getBalanceForId(to);
         if (currentBalance == null) {
             repository.save(to, amount);
             return amount;
         }
         else {
-            BigDecimal updateBalance = currentBalance.add(amount);
+            Long updateBalance = currentBalance + amount;
             repository.save(to, updateBalance);
-            return  updateBalance;
+            return updateBalance;
         }
     }
 
     public void makeTransfer(TranferBalance tranferBalance) {
-        BigDecimal fromBalance = repository.getBalanceForId(tranferBalance.getFrom());
-        BigDecimal toBalance = repository.getBalanceForId(tranferBalance.getTo());
+        Long fromBalance = repository.getBalanceForId(tranferBalance.getFromSender());
+        Long toBalance = repository.getBalanceForId(tranferBalance.getToSender());
         if (fromBalance == null || toBalance == null) throw new IllegalArgumentException("no id");
-        if (tranferBalance.getAmount().compareTo(fromBalance) > 0) throw new IllegalArgumentException("no money");
+        if (tranferBalance.getAmountSender().compareTo(fromBalance) > 0) throw new IllegalArgumentException("no money");
 
-        BigDecimal updatedFromBalance = fromBalance.subtract(tranferBalance.getAmount());
-        BigDecimal updatedToBalance = toBalance.add(tranferBalance.getAmount());
+        Long updatedFromBalance = fromBalance + tranferBalance.getAmountSender();
+        Long updatedToBalance = toBalance+tranferBalance.getAmountSender();
 
-        repository.save(tranferBalance.getFrom(), updatedFromBalance);
-        repository.save(tranferBalance.getTo(), updatedToBalance);
+        repository.save(tranferBalance.getFromSender(), updatedFromBalance);
+        repository.save(tranferBalance.getToSender(), updatedToBalance);
     }
 }
