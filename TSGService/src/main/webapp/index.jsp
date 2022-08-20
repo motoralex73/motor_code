@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!!!</h2>
+<h2>Start page. Go to /people</h2>
 </body>
 </html>
