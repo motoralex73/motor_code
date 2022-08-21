@@ -22,7 +22,8 @@ open class SpringConfig: WebMvcConfigurer {
     constructor(applicationContext: ApplicationContext) {
         this.applicationContext = applicationContext
     }
-    constructor() {}
+
+    constructor()
 
     @Bean
     open fun templateResolver(): SpringResourceTemplateResolver{

@@ -13,6 +13,13 @@ class Person {
         this.email = email
     }
 
+    constructor() {
+        id = 0
+        name = "null"
+        age = 0
+        email = "null"
+    }
+
     fun setId(id: Int) {
         this.id = id
     }
@@ -26,16 +33,16 @@ class Person {
         this.email = email
     }
     fun getId(): Int {
-        return this.id
+        return id
     }
     fun getName(): String {
-        return this.name
+        return name
     }
     fun getAge(): Int {
-        return this.age
+        return age
     }
     fun getEmail(): String {
-        return this.email
+        return email
     }
 
 }

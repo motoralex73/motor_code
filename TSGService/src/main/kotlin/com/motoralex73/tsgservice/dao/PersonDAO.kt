@@ -7,7 +7,7 @@ import kotlin.collections.ArrayList
 @Component
 class PersonDAO {
     var peopleCount: Int = 0
-    var people: ArrayList<Person> = arrayListOf(
+    private var people: ArrayList<Person> = arrayListOf(
             Person(++peopleCount, "Tom", 24, "tom@mail.ru"),
             Person(++peopleCount, "Bob", 52, "bob@mail.ru"),
             Person(++peopleCount, "Mike", 18, "mike@yahoo.com"),
@@ -17,12 +17,14 @@ class PersonDAO {
         return people;
     }
 
-    fun  show(id: Int): Person {
+    fun show(id: Int): Person {
         return people.stream().filter { people -> people.getId() == id }.findAny().orElse(null)
     }
 
     fun save(person: Person) {
+        println("SAVE PERSON")
         person.setId(++peopleCount)
+        println("Save new Person: ${person.getName()}")
         people.add(person)
     }
 
