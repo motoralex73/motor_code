@@ -12,12 +12,13 @@
     <list default="true" id="b91c3b71-3f55-4d77-a7eb-e42ce90436e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/config/SpringConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/config/SpringConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/controllers/PeopleController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/controllers/PeopleController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/dao/PersonDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/dao/PersonDAO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/models/Person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/models/Person.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJava/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJava/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJava/.idea/dataSources/6ed733c8-28a2-4dff-8541-80f9485bffc3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJava/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJava/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/alex/motor_code/TSGService",
+    "last_opened_file_path": "/home/alex/SpringCourse",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -194,6 +195,9 @@
       <workItem from="1661007497672" duration="3486000" />
       <workItem from="1661062543836" duration="4740000" />
       <workItem from="1661071762028" duration="4684000" />
+      <workItem from="1661096761234" duration="3863000" />
+      <workItem from="1661178564027" duration="1550000" />
+      <workItem from="1661180542805" duration="1922000" />
     </task>
     <servers />
   </component>

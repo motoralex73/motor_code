@@ -14,7 +14,7 @@ class PersonDAO {
             Person(++peopleCount, "Katy", 34, "katy@gmail.com"))
 
     fun index(): ArrayList<Person> {
-        return people;
+        return people
     }
 
     fun show(id: Int): Person {

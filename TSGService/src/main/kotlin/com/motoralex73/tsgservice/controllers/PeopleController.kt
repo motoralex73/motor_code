@@ -40,6 +40,7 @@ class PeopleController {
 
     @PostMapping()
     fun create(@ModelAttribute("person") person: Person) : String {
+        //приходит пустой персон, модель аттрибут почему то персона не передает???
         println("CREATE: ${person.getName()}")
         personDAO.save(person)
         return "redirect:/people"
