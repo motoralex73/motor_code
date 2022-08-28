@@ -5,7 +5,10 @@ import javax.validation.constraints.Min
 import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.Size
 
-class Person {
+@Entity
+open class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @NotEmpty(message = "Id should not be empty")
     private var id: Int = 0
     @NotEmpty(message = "Name should not be empty")

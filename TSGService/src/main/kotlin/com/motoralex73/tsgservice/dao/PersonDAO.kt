@@ -1,31 +1,39 @@
 package com.motoralex73.tsgservice.dao;
 
 import com.motoralex73.tsgservice.models.Person;
+import com.motoralex73.tsgservice.repos.PersonRepo
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component;
 import kotlin.collections.ArrayList
 
 @Component
 class PersonDAO {
     var peopleCount: Int = 0
-    private var people: ArrayList<Person> = arrayListOf(
-            Person(++peopleCount, "Tom", 24, "tom@mail.ru"),
-            Person(++peopleCount, "Bob", 52, "bob@mail.ru"),
-            Person(++peopleCount, "Mike", 18, "mike@yahoo.com"),
-            Person(++peopleCount, "Katy", 34, "katy@gmail.com"))
+//    private var people: ArrayList<Person> = arrayListOf(
+//            Person(++peopleCount, "Tom", 24, "tom@mail.ru"),
+//            Person(++peopleCount, "Bob", 52, "bob@mail.ru"),
+//            Person(++peopleCount, "Mike", 18, "mike@yahoo.com"),
+//            Person(++peopleCount, "Katy", 34, "katy@gmail.com"))
 
-    fun index(): ArrayList<Person> {
-        return people
-    }
+    @Autowired
+    private val personRepo: PersonRepo? = null
+
+//    fun index(): ArrayList<Person> {
+//        return people
+//    }
 
     fun show(id: Int): Person {
-        return people.stream().filter { people -> people.getId() == id }.findAny().orElse(null)
+        //временно
+        return Person(++peopleCount, "Tom", 24, "tom@mail.ru")
+
+        //return people.stream().filter { people -> people.getId() == id }.findAny().orElse(null)
     }
 
     fun save(person: Person) {
         println("SAVE PERSON")
         person.setId(++peopleCount)
         println("Save new Person: ${person.getName()}")
-        people.add(person)
+        personRepo.save(person)
     }
 
     fun update(id: Int, updatedPerson: Person) {
@@ -37,6 +45,7 @@ class PersonDAO {
     }
 
     fun delete(id: Int) {
-        people.removeIf { p -> p.getId() == id }
+        println("Delete people with id = $id")
+        //people.removeIf { p -> p.getId() == id }
     }
 }

@@ -33,6 +33,5 @@ class MySpringMvcDispatcherSerlvetIntitializer: AbstractAnnotationConfigDispatch
         val cl = SpringConfig().javaClass
         println("print getServletConfigClasses")
         return arrayOf(cl)
-        //return null//Class[]{SpringConfig.class}
     }
 }

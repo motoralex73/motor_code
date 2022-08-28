@@ -9,24 +9,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91c3b71-3f55-4d77-a7eb-e42ce90436e6" name="Changes" comment="">
+    <list default="true" id="b91c3b71-3f55-4d77-a7eb-e42ce90436e6" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/config/MySpringMvcDispatcherSerlvetIntitializer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/config/MySpringMvcDispatcherSerlvetIntitializer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/config/SpringConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/config/SpringConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/controllers/PeopleController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/controllers/PeopleController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/dao/PersonDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/dao/PersonDAO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/models/Person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/motoralex73/tsgservice/models/Person.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../studyJava/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJava/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../studyJava/.idea/dataSources/6ed733c8-28a2-4dff-8541-80f9485bffc3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../studyJava/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJava/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Worksheet" />
+        <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -38,36 +64,32 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2DaRIGZ9m7PG9ZcPhSxRjqXcQUp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/alex/SpringCourse",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "2b4b8529a9bdfaf37849877bfbc75d27"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="E:\alex_pro\motor_code\TSGService\src\main\kotlin\com\motoralex73\tsgservice\repos" />
+      <recent name="E:\alex_pro\motor_code\TSGService\src\main\kotlin\com\motoralex73\tsgservice\models" />
+      <recent name="E:\alex_pro\motor_code\TSGService\src\main\kotlin\com\motoralex73\tsgservice\controllers" />
+      <recent name="E:\alex_pro\motor_code\TSGService\src\main\kotlin\com\motoralex73\tsgservice\config" />
+      <recent name="E:\alex_pro\motor_code\TSGService\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.motoralex73.tsgservice.models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -78,13 +100,13 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,7 +219,9 @@
       <workItem from="1661071762028" duration="4684000" />
       <workItem from="1661096761234" duration="3863000" />
       <workItem from="1661178564027" duration="1550000" />
-      <workItem from="1661180542805" duration="1922000" />
+      <workItem from="1661180542805" duration="2869000" />
+      <workItem from="1661267565421" duration="8681000" />
+      <workItem from="1661610728710" duration="1147000" />
     </task>
     <servers />
   </component>
@@ -214,5 +238,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
