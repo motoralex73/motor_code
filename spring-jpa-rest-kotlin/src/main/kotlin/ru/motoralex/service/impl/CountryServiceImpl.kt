@@ -72,25 +72,25 @@ class CountryServiceImpl(
             id = this.id,
             name = this.name,
             population = this.population,
-            cities = this.cities.map { it.toDto() },
+            cities = this.cities.map { it.toDto() }
         )
 
     private fun CityEntity.toDto(): CityDto =
         CityDto(
-            name = this.name,
+            name = this.name
         )
 
     private fun CountryDto.toEntity(): CountryEntity =
         CountryEntity(
             id = 0,
             name = this.name,
-            population = this.population,
+            population = this.population
         )
 
     private fun CityDto.toEntity(country: CountryEntity): CityEntity =
         CityEntity(
             id = 0,
             name = this.name,
-            country = country,
+            country = country
         )
 }

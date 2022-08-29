@@ -11,5 +11,6 @@ interface CountryRepository : CrudRepository<CountryEntity, Int> {
 
     fun findByNameStartsWithIgnoreCaseOrderByName(prefix: String): List<CountryEntity>
 
+    // найти все записи без фильтра и упорядочить по имени, по проекции их модели NameOnly, чтобы не тянуть все поля
     fun findAllByOrderByName(): List<NameOnly>
 }
