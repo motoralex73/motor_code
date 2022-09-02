@@ -1,15 +1,15 @@
 
 //Primary Constructor - первичный конструктор
-class Person(val firstName: String, val lastName: String, var age: Int ) {
+class Person2(val firstName: String, val lastName: String, var age: Int ) {
     var children: MutableList<Person> = mutableListOf() //ArrayList
 
     init {
         println("Person is created $firstName")
     }
     //вторичный констуктор
-    constructor(firstName: String, lastName: String, age: Int, child: Person) :
+    constructor(firstName: String, lastName: String, age: Int, child2: Person2) :
             this(firstName,lastName,age) { //должен обязательно наследовать первичный конструктор
-        children.add(child)
+        //children.add(child2)
     }
     //констуктор по умолчанию, без аргументов
     constructor(): this("","",-1)
@@ -29,8 +29,8 @@ data class Rectangle(var height: Double, var lenght: Double) {
 }
 
 fun main() {
-    val child = Person("Child","SmallChild",1)
-    val p1 = Person("Tom","Hardy",35,child)
+    val child2 = Person2("Child","SmallChild",1)
+    val p1 = Person2("Tom","Hardy",35,child2)
     println(p1.firstName)
 
     val rectangle1 = Rectangle(5.0,2.3)

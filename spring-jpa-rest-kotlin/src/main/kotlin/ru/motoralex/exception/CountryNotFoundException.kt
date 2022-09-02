@@ -6,6 +6,6 @@ class CountryNotFoundException(countryId: Int) : BaseException(
     HttpStatus.NOT_FOUND,
     ApiError(
         errorCode = "country.not.found",
-        description = "Country not found with id=$countryId"
+        description = "Страна с id=$countryId не найдена"
     )
 )

@@ -8,6 +8,7 @@ import javax.persistence.Id
 import javax.persistence.OneToMany
 import javax.persistence.Table
 
+//сущность-таблица стран в базе данных со связями один к многим
 @Entity
 @Table(name = "country")
 class CountryEntity(

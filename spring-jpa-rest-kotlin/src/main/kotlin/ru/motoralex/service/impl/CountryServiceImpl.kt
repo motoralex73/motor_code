@@ -16,7 +16,7 @@ import ru.motoralex.service.CountryService
 @Service
 class CountryServiceImpl(
     private val countryRepository: CountryRepository,
-    private val cityRepository: CityRepository,
+    private val cityRepository: CityRepository
 ) : CountryService {
 
     override fun getAll(pageIndex: Int): List<CountryDto> =

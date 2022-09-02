@@ -8,6 +8,7 @@ import javax.persistence.JoinColumn
 import javax.persistence.ManyToOne
 import javax.persistence.Table
 
+//сущность городов в базе данных со связями многие к одному
 @Entity
 @Table(name = "city")
 class CityEntity (
