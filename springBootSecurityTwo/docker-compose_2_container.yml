@@ -1,0 +1,40 @@
+version: "3"
+services:
+ db:
+  image: postgres:latest
+  container_name: db
+  environment:
+   POSTGRES_USER: postgres
+   POSTGRES_PASSWORD: '123'
+   POSTGRES_DB: postgres
+  ports:
+   - '5432:5432'
+  volumes:  # Добавляем секцию volumes
+   - postgres_data:/var/lib/postgresql/data
+  networks:
+   motornet:
+    driver: bridge
+volumes:  # Объявляем volume, который будет использоваться
+ postgres_data:
+ app:
+  container_name: app
+  image: motoralex73/repo:latest
+  ports:
+   - '8080:8080'
+  networks:
+   - motornet
+  depends_on:
+   - db
+  environment:
+   DB_HOST: db
+   DB_PORT: 5432
+   DB_USER: postgres
+   DB_PASSWORD: '123'
+   DB_NAME: new_book_db
+  healthcheck:
+   test: ["CMD", "pg_isready", "--host=db", "--port=5432", "--username=postgres"]
+   retries: 3
+   timeout: 5s
+networks:
+ motornet:
+  driver: bridge

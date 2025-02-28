@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Start page</title>
+    <style>
+        /* Здесь можно добавить стили */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #1e6ba8;
+            text-decoration: underline;
+        }
+        form {
+            width: 100px;
+            margin: 0 auto;
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="submit"] {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        p {
+            font-weight: bold; /* Добавляем стиль для заголовка */
+        }
+    </style>
+</head>
+<body>
+
+<p>Приветствую на странице нашей библиотеки!</p>
+<br/>
+<a href="/people">Посмотреть читателей</a>
+<br/>
+<a href="/books">Посмотреть книги</a>
+<br/>
+
+<form th:action="@{/logout}" th:method="POST">
+    <input type="submit" value="Logout">
+</form>
+
+</body>
+</html>

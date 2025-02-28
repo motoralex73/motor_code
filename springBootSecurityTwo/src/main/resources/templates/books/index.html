@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<style>
+    /* Здесь можно добавить стили */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    div {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .hr {
+        border: 1px solid #dddddd;
+    }
+</style>
+
+<div th:each="book : ${books}">
+    <a th:href="@{/books/{id}(id=${book.getId()})}" th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getYear()}">book</a>
+</div>
+
+<br/>
+<div class="hr"></div>
+
+<a href="/books/new">Добавить книгу</a>
+
+</body>
+</html>
