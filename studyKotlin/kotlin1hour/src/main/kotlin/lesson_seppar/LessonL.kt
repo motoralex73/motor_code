@@ -1,13 +1,13 @@
 package lesson_seppar
 
-//interface Summa {
-//    var a1: Int
-//    var a2: Int
-//    var a3: Int
-//
-//    fun sum(a1:Int, a2: Int, a3: Int) : Int
-//
-//}
+interface Summa {
+    var a1: Int
+    var a2: Int
+    var a3: Int
+
+    fun sum(a1: Int, a2: Int, a3: Int): Int
+
+}
 
 
 fun main() {
@@ -16,8 +16,8 @@ fun main() {
     var a3 = 7
 
     print("Enter operation: ")
-    val sum = {x:Int,y:Int,z:Int ->
-        when(readLine()) {
+    val sum = { x: Int, y: Int, z: Int ->
+        when (readLine()) {
             "+" -> x + y + z
             "-" -> x - y - z
             "*" -> x * y * z
@@ -27,7 +27,7 @@ fun main() {
             }
         }
     }
-    println( sum(a1,a2,a3) )
+    println(sum(a1, a2, a3))
 
 //    val multiply = {x:Int,y:Int,z:Int -> x*y*z}
 

@@ -3,7 +3,7 @@ import kotlin.collections.HashMap
 
 fun main() {
 //prior - name
-    var userMapPrior: HashMap<Int,String> = hashMapOf()
+    var userMapPrior: HashMap<Int, String> = hashMapOf()
     var qReq: Queue<String> = PriorityQueue()
 
     while (true) {
@@ -19,20 +19,13 @@ fun main() {
     userMapPrior.toSortedMap()
     //println(userMapPrior)
 
-    var count:Int = 0
+    var count: Int = 0
     for (i in userMapPrior) {
         count++
         println("[$count] -> $i")
         qReq.add(i.value)
     }
     println("Очередь по приоритетам: $qReq")
-
-
-
-
-
-
-
 
 
 }

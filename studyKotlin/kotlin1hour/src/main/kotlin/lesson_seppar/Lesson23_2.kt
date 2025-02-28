@@ -9,7 +9,7 @@ fun printHeader() {
 
 fun main() {
 
-    var mapUser: HashMap<String,String> = hashMapOf()
+    var mapUser: HashMap<String, String> = hashMapOf()
 
     while (true) {
         printHeader()
@@ -87,7 +87,7 @@ fun addUser(mapUser: HashMap<String, String>) {
     while (true) {
         print("Login: ")
         var login: String = readLine().toString()
-        if (login=="q") break
+        if (login == "q") break
         print("Password:")
         var pass: String = readLine().toString()
         mapUser[login] = pass

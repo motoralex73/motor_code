@@ -12,16 +12,16 @@ fun checkChe(arr: ArrayList<Int>) {
 fun main() {
     var arr: ArrayList<Int> = ArrayList(100)
     var count = 1000
-        while (count > 0) {
-            arr.add( (-1000..1000).random() )
-            count--
-     }
+    while (count > 0) {
+        arr.add((-1000..1000).random())
+        count--
+    }
 
     print("All random digital: ")
     println(arr)
     checkChe(arr)
     print("Введите число для проверки: ")
     val p = readLine()?.toInt() //with save call
-    if (p != null) println( arr.count { e -> e == p.toInt() } )
+    if (p != null) println(arr.count { e -> e == p.toInt() })
 
 }

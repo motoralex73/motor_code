@@ -17,10 +17,6 @@ import java.util.List;
 
 public class StudyBaseJava extends Frame{
 
-/*
-<applet code="AppletSkel" width=300 height=100>
-</applet>
-*/
     public class AppletSkel extends Applet {
         public void init() {}
         public void start() {}
@@ -45,9 +41,11 @@ public class StudyBaseJava extends Frame{
           this.hlp = hlp;
         };
     }
+
     static class ChildMyClass extends MyClass {
         @Override
         void setHlp(int hlp) {
+            hlp++;
             super.setHlp(hlp);
         }
     }
@@ -513,6 +511,7 @@ public class StudyBaseJava extends Frame{
             public StudyFrame() {
                 super();
                 setTitle("Main window");
+                setCursor(Cursor.TEXT_CURSOR);
                 setBounds(100,100,400,400);
                 setResizable(false);
                 addWindowListener(new WindowListener() {
@@ -548,7 +547,7 @@ public class StudyBaseJava extends Frame{
                 setLayout(null);
                 Panel panel = new Panel();
                 panel.setBounds(10,30,300,300);
-                panel.setBackground(Color.BLUE);
+                panel.setBackground(Color.CYAN);
                 panel.setLayout(new BorderLayout());
                 Label label = new Label("Здесь могла быть ваша реклама.");
                 label.setAlignment(Label.CENTER);
@@ -751,52 +750,63 @@ public class StudyBaseJava extends Frame{
         }
     }
 
+    static class Cell<T> {
+        T t;
+        public T getT() {
+            return t;
+        }
+        public void setT(T t) {
+            this.t = t;
+            System.out.println(t);
+        }
+    }
+
     public static void main(String[] args) throws IOException, Exception, InterruptedException
      {
-        String str = "Программируем на Java";
-        char[] symbs = new char[12];
-        "Изучаем язык Pascal".getChars(0,8,symbs,0);
-        str.getChars(str.length()-4,str.length(),symbs,8);
-        System.out.println(symbs);
-        for (int k=str.length()-1; k>=0; k--) {
-            System.out.print("|"+str.charAt(k));
-        }
-        System.out.println("|");
-        byte[] nums;
-        nums = "Java".getBytes();
-        System.out.println(Arrays.toString(nums));
-        symbs = "Java".toCharArray();
-        System.out.println(Arrays.toString(symbs));
-
-         Dog dog = new Dog();
-         dog.setName("Bobik");
-         dog.setYear(7);
-         System.out.println(dog.sayHello());
-
-         //лямбда
-            Lambda A = t ->  t.length();
-            Lambda B = t -> {
-                int res=0;
-                for (int i=0;i<t.length();i++) {res += t.charAt(i); System.out.println("код символа "+t.charAt(i)+" : "+(int)t.charAt(i));}
-                return res;
-            };
-            String t = "Java";
-            System.out.println("Длина текста: "+A.get(t));
-            System.out.println("Сумма кодов символов в строке: "+B.get(t));
-            //ссылка на метод объекта
-         MyClass1 obj = new MyClass1();
-         Alpha1 A1 = obj::set;
-         Bravo1 B1 = obj::show;
-         A1.apply("Red");
-         obj.show();
-         obj.set("Yellow");
-         B1.display();
-         obj = new MyClass1();
-         obj.set("Green");
-         B1.display();
-         A1.apply("Blue");
-         obj.show();
-         B1.display();
+//        String str = "Программируем на Java";
+//        char[] symbs = new char[12];
+//        "Изучаем язык Pascal".getChars(0,8,symbs,0);
+//        str.getChars(str.length()-4,str.length(),symbs,8);
+//        System.out.println(symbs);
+//        for (int k=str.length()-1; k>=0; k--) {
+//            System.out.print("|"+str.charAt(k));
+//        }
+//        System.out.println("|");
+//        byte[] nums;
+//        nums = "Java".getBytes();
+//        System.out.println(Arrays.toString(nums));
+//        symbs = "Java".toCharArray();
+//        System.out.println(Arrays.toString(symbs));
+//
+//         Dog dog = new Dog();
+//         dog.setName("Bobik");
+//         dog.setYear(7);
+//         System.out.println(dog.sayHello());
+//
+//         //лямбда
+//            Lambda A = t ->  t.length();
+//            Lambda B = t -> {
+//                int res=0;
+//                for (int i=0;i<t.length();i++) {res += t.charAt(i); System.out.println("код символа "+t.charAt(i)+" : "+(int)t.charAt(i));}
+//                return res;
+//            };
+//            String t = "Java";
+//            System.out.println("Длина текста: "+A.get(t));
+//            System.out.println("Сумма кодов символов в строке: "+B.get(t));
+//            //ссылка на метод объекта
+//         MyClass1 obj = new MyClass1();
+//         Alpha1 A1 = obj::set;
+//         Bravo1 B1 = obj::show;
+//         A1.apply("Red");
+//         obj.show();
+//         obj.set("Yellow");
+//         B1.display();
+//         obj = new MyClass1();
+//         obj.set("Green");
+//         B1.display();
+//         A1.apply("Blue");
+//         obj.show();
+//         B1.display();
 
 
 
@@ -869,27 +879,37 @@ public class StudyBaseJava extends Frame{
 
 //         StudyRecurcia test = new StudyRecurcia();
 //         test.proba(0);
+//
 
-         System.out.println("Main thread: "+Thread.currentThread().getName());
-         StudyThread s1 = new StudyThread("One",1);
-         StudyThread s2 = new StudyThread("Two",2);
-         StudyThread s3 = new StudyThread("Three",3);
-         try {
-             if (s1.isAlive()) s1.join();
-             if (s2.isAlive()) s2.join();
-             if (s3.isAlive()) s3.join();
-         }
-         catch (Exception e) {
-             System.out.println("Exception join thread");
-         }
+//         System.out.println("Main thread: "+Thread.currentThread().getName());
+//         StudyThread s1 = new StudyThread("One",1);
+//         StudyThread s2 = new StudyThread("Two",2);
+//         StudyThread s3 = new StudyThread("Three",3);
+//         System.out.println("Name main thread: "+Thread.currentThread().getName());
+
+         Cell<String> cell = new Cell<>();
+         cell.setT("HELLO");
+
+
+
+         //         try {
+//             if (s1.isAlive()) s1.join();
+//             if (s2.isAlive()) s2.join();
+//             if (s3.isAlive()) s3.join();
+//         }
+//         catch (Exception e) {
+//             System.out.println("Exception join thread");
+//         }
 
          //StudyThread studyThread1 = new StudyThread();
          //studyThread1.showThread();
+//
+//         Betta betta = new Betta();
+//         System.out.println("NUMBER: "+Alpha.NUMBER);
+//         betta.set(116);
+//         betta.show();
 
-         Betta betta = new Betta();
-         System.out.println("NUMBER: "+Alpha.NUMBER);
-         betta.set(116);
-         betta.show();
+         //StudyFrame studyFrame = new StudyFrame();
 
      }
 

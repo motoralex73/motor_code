@@ -1,10 +1,8 @@
 interface ExampleInterface {
     val sayHello: String;
-    fun showHello() : String{
-        return sayHello
-    }
+    fun showHello() = sayHello
 }
 
 interface DbConnection {
-    fun getConnection() : String
+    fun getConnection(): String
 }

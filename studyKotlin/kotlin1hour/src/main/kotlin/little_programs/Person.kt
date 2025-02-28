@@ -1,4 +1,5 @@
 package little_programs
+
 class Person(val firstName: String, val lastName: String, val isIll: Boolean = false) {
     override fun toString(): String {
         return "$firstName $lastName"

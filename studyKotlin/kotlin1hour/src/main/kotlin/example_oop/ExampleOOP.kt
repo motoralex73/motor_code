@@ -1,9 +1,11 @@
 enum class Animals {
     DOG, CAT, BEAR, LION;
+
     fun toLowerCase() = name.toLowerCase().capitalize()
 }
 
-data class Person1 (val firstName: String="Peter", val lastName: String="Patrink", val age: Int?=55) : ExampleInterface, DbConnection {
+data class Person1(val firstName: String = "Peter", val lastName: String = "Patrink", val age: Int? = 55) :
+    ExampleInterface, DbConnection {
 
     override fun toString(): String {
         return "$firstName $lastName $age login=$login"
@@ -16,11 +18,11 @@ data class Person1 (val firstName: String="Peter", val lastName: String="Patrink
     override val sayHello: String = "Hello, my friend"
 
     var login: String? = null
-    set(value) {
-        if (value == null)
-            field = "none"
-        else field = value
-    }
+        set(value) {
+            if (value == null)
+                field = "none"
+            else field = value
+        }
         get() {
             val loginField = field ?: "неизвестно"
             println("логин : $loginField")
@@ -28,7 +30,7 @@ data class Person1 (val firstName: String="Peter", val lastName: String="Patrink
         }
 }
 
-fun checkDataType(obj : Person1) {
+fun checkDataType(obj: Person1) {
     if (obj is ExampleInterface) { //проверка, принадлежит ли объект к интерфейсу
         obj.showHello()
         println("epta")
@@ -39,8 +41,8 @@ fun checkDataType(obj : Person1) {
 }
 
 fun main() {
-    val person1 = Person1("Alex","Pro",35)
-    println(person1.firstName+" "+person1.lastName+" "+person1.age)
+    val person1 = Person1("Alex", "Pro", 35)
+    println(person1.firstName + " " + person1.lastName + " " + person1.age)
     val person2 = Person1("Vasya")
     println("${person2.showHello()} and ${person2.getConnection()}")
     person2.login
@@ -48,7 +50,7 @@ fun main() {
     checkDataType(person1)
 
     val animal = Animals.BEAR
-    when(animal) {
+    when (animal) {
         Animals.BEAR -> println(animal.toLowerCase())
     }
 }

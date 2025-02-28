@@ -1,7 +1,7 @@
 //циклы
 fun main() {
     //for each
-    val items = listOf("apple","banana","orange") //List.of() Java 9
+    val items = listOf("apple", "banana", "orange") //List.of() Java 9
     //mutableListOf("apple","banana","orange") //ArrayList
     for (it in items) println(it)
     //while

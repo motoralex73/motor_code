@@ -1,8 +1,9 @@
 package study_kotlin_1_hour
-sealed class Db{
-    data class MySQL(val id:Int, val conn:String) : Db()
-    data class MongoDB(val id:Int, val conn:String) : Db()
-    data class PostgreSQL(val id:Int, val conn:String, val isDone:Boolean) : Db()
+
+sealed class Db {
+    data class MySQL(val id: Int, val conn: String) : Db()
+    data class MongoDB(val id: Int, val conn: String) : Db()
+    data class PostgreSQL(val id: Int, val conn: String, val isDone: Boolean) : Db()
     object Help : Db() {
         val conn = "Connection done!"
     }
@@ -29,8 +30,8 @@ val filter: (String) -> Boolean = {
 }
 
 fun main() {
-    val db = Db.MongoDB(5,"mongo")
-    val db_2 = Db.PostgreSQL(5,"mongo",true)
+    val db = Db.MongoDB(5, "mongo")
+    val db_2 = Db.PostgreSQL(5, "mongo", true)
     val db_copy = db.copy()
     if (db == db_copy) println("они равны")
     val db_copy_2 = db.copy(conn = "Done")

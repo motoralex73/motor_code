@@ -1,4 +1,4 @@
-fun testWhen(input : Any) {
+fun testWhen(input: Any) {
     when (input) {
         1 -> println("Единица")
         2 -> println("Двойка")

@@ -1,9 +1,8 @@
-
-fun  main() {
+fun main() {
     var listDigital: ArrayList<Any> = arrayListOf()
     println("Enter digital number (q-exit):")
 
-    var p: String?="";
+    var p: String? = "";
     while (p.equals("q").not()) {
         p = readLine()
         if (p != null && (p != "q")) {
@@ -20,7 +19,7 @@ fun  main() {
     println("5.Заменить значение в списке")
     println("q - exit")
 
-    when(readLine()) {
+    when (readLine()) {
         "1" -> {
             p = readLine()
             if (p != null && (p != "q")) {
@@ -28,15 +27,15 @@ fun  main() {
                 println(listDigital)
             }
         }
-        "2" -> searchElement(listDigital,"2")
+        "2" -> searchElement(listDigital, "2")
         "3" -> println(listDigital)
-        "4" -> searchElement(listDigital,"4")
-        "5" -> searchElement(listDigital,"5")
+        "4" -> searchElement(listDigital, "4")
+        "5" -> searchElement(listDigital, "5")
         else -> println("Введите нормальный параметр")
     }
 }
 
-fun searchElement(listDigital: ArrayList<Any>, s:String) {
+fun searchElement(listDigital: ArrayList<Any>, s: String) {
     println(listDigital)
 
     if (s == "2") println("Введите элемент для удаления из списка:")

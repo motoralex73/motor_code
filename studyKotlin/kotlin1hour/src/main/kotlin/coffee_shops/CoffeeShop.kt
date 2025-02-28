@@ -15,8 +15,8 @@ abstract class CoffeeShop(val priceAmericano: Double, val priceCappuccino: Doubl
         println("Latte sold: $countLatte")
 
         val money = countAmericano * priceAmericano +
-                    countCappuccino * priceCappuccino +
-                    countLatte * priceLatte
+                countCappuccino * priceCappuccino +
+                countLatte * priceLatte
 
         println("All money is: $money")
     }

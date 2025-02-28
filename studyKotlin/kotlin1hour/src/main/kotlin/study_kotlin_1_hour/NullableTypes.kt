@@ -1,7 +1,7 @@
 fun main() {
-    var a : String = "Hello"
+    var a: String = "Hello"
     //a = null // NULL Pointer Exception полностью исключены
-    var b : String? = "Test" //тип с проверкой save call
+    var b: String? = "Test" //тип с проверкой save call
     b = null
     b?.length // save call, ? - проверяет что вернуть, чтобы исключить NPE, просто вернется null
 

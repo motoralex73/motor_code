@@ -26,8 +26,7 @@ fun countLetters(str: String): String {
     for (letter in str.substring(1)) {
         if (currentLetter == letter) {
             count++
-        }
-        else {
+        } else {
             if (count == 1) result += currentLetter
             else result += "$currentLetter$count"
 
@@ -58,14 +57,14 @@ fun groupWords(words: Array<String>): List<List<String>> {
             map[sortedWord] = mutableListOf(word)
     }
 
-    for ((key,value) in map)
+    for ((key, value) in map)
         result.add(value)
 
     return result
 }
 
 fun main() {
-    println( getRepeatedIntersection(intArrayOf(1,2,3,3,4,2), intArrayOf(1,3,4,5,2,3)) )
-    println( countLetters("AAAAAAAABBBBBBBBBCCDXXXX") )
-    println( groupWords(arrayOf("tan","ate","eat","tea","nat","bat")) )
+    println(getRepeatedIntersection(intArrayOf(1, 2, 3, 3, 4, 2), intArrayOf(1, 3, 4, 5, 2, 3)))
+    println(countLetters("AAAAAAAABBBBBBBBBCCDXXXX"))
+    println(groupWords(arrayOf("tan", "ate", "eat", "tea", "nat", "bat")))
 }

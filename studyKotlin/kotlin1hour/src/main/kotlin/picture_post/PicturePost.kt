@@ -5,13 +5,14 @@ import kotlin.random.Random
 fun main() {
     val posts = listOf(
         InstagramPost(0, Picture(generateRandomData(256))) { it.data },
-        InstagramPost(1, listOf(Picture(generateRandomData(256)), Picture(generateRandomData(256)))
+        InstagramPost(
+            1, listOf(Picture(generateRandomData(256)), Picture(generateRandomData(256)))
         ) { pictures ->
             pictures
                 .map { pic -> pic.data }
                 .fold(byteArrayOf()) { acc, bytes -> acc + bytes }
         },
-        InstagramPost(2,Video(generateRandomData(1024))) { it.data }
+        InstagramPost(2, Video(generateRandomData(1024))) { it.data }
     )
     println(posts)
 
