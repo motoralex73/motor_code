@@ -134,7 +134,5 @@ public class PatternsFilter {
         OrFilter orFilter = new OrFilter(new SpeedFilter(), new SpeedFilter());
         cars = orFilter.filter(cars);
         System.out.println(cars);
-
-
     }
 }

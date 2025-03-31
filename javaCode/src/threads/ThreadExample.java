@@ -26,6 +26,7 @@ public class ThreadExample {
         }
     }
 
+    //@SneakyThrows
     static class MyThreadClassInside extends Thread {
 
         @Override
